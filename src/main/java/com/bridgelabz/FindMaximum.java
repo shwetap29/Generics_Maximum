@@ -1,29 +1,22 @@
 package com.bridgelabz;
-// used Integer object and compareTo To test MaximumNumber
-public class FindMaximum {
-    public static Integer compareIntegerMaximum(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
-     Integer maximumNumber = firstNumber;
-     if (secondNumber.compareTo(maximumNumber)>0)
-         maximumNumber = secondNumber;
-     if (thirdNumber.compareTo(maximumNumber)>0)
-         maximumNumber = thirdNumber;
-     return maximumNumber;
+public class FindMaximum<E extends Comparable> {
+    E first, second, third;
+
+    public FindMaximum(E first, E second, E third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
     }
 
-    public static Float compareFloatMaximum(Float firstNumber, Float secondNumber, Float thirdNumber) {
-        Float maximumNumber = firstNumber;
-        if (secondNumber.compareTo(maximumNumber)>0)
+    public static <E extends Comparable> E compareMaximum(E firstNumber, E secondNumber, E thirdNumber) {
+        E maximumNumber = firstNumber;
+        if (secondNumber.compareTo(maximumNumber)> 0)
             maximumNumber = secondNumber;
-        if (thirdNumber.compareTo(maximumNumber)>0)
+        if (thirdNumber.compareTo(maximumNumber)> 0)
             maximumNumber = thirdNumber;
         return maximumNumber;
     }
-    public static String compareStringMaximum(String firstWord, String secondWord, String thirdWord) {
-        String maximumNumber = firstWord;
-        if (secondWord.compareTo(maximumNumber) > 0)
-            maximumNumber = secondWord;
-        if (thirdWord.compareTo(maximumNumber) > 0)
-            maximumNumber = thirdWord;
-        return maximumNumber;
-    }
 }
+
+
+

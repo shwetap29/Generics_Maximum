@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GenericsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-06-20T08:54:28" hostname="SHWETA29" time="0.012">
+<testsuite name="GenericsTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-06-20T11:48:22" hostname="SHWETA29" time="0.012">
   <properties/>
-  <testcase name="givenFloatNumber_whenThirdNumberMaximum_shouldReturnMaximum" classname="GenericsTest" time="0.004"/>
+  <testcase name="givenFloatNumber_whenThirdNumberMaximum_shouldReturnMaximum" classname="GenericsTest" time="0.005"/>
   <testcase name="givenSecondNumber_whenSecondNumberMaximum_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
   <testcase name="givenFloatNumber_whenFirstNumberMaximum_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
   <testcase name="givenFloatNumber_whenSecondNumberMaximum_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
   <testcase name="givenThirdNumber_whenThirdNumberMaximum_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
   <testcase name="givenFirstNumber_whenFirstNumberMaximum_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
+  <testcase name="givenString_whenSecondWord_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
+  <testcase name="givenString_whenFirstWord_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
+  <testcase name="givenString_whenThirdWord_shouldReturnMaximum" classname="GenericsTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
