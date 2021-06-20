@@ -76,4 +76,21 @@ public class GenericsTest {
         String max = findMaximum.compareMaximum();
         Assert.assertEquals("Peach", max);
     }
+
+    //To Accept More Than 3 Parameters
+
+    @Test
+    public void givenMultipleInt_shouldReturn_maxInt() {
+        Assert.assertSame(40, new FindMaximum<>(10, 20, 30, 40).testMax());
+    }
+
+    @Test
+    public void  givenMultipleFloat_shouldReturn_maxFloat() {
+        Assert.assertEquals((Float) 40.4485f, new FindMaximum<>(10.5423f, 20.48452f, 30.345f, 40.4485f).testMax());
+    }
+
+    @Test
+    public void  givenMultipleString_shouldReturn_maxString() {
+        Assert.assertEquals("peach", new FindMaximum<>("peach", "banana", "apple", "coconut").testMax());
+    }
 }

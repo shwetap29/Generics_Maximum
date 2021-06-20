@@ -2,20 +2,24 @@ package com.bridgelabz;
 
 //Generic class to Take In 3 variables
 public class FindMaximum<E extends Comparable> {
-    E first, second, third;
+    E[] values;
 
-    public FindMaximum(E first, E second, E third) {
-        this.first = first;
-        this.second = second;
-        this.third = third;
+    @SafeVarargs
+    public FindMaximum(E ...values){
+        this.values = values;
+    }
+    public E testMax(){
+        return (E) compareMaximum(values);
     }
 
-    public  E compareMaximum() {
-        E maximumNumber = first;
-        if (second.compareTo(maximumNumber)>0)
-            maximumNumber = second;
-        if (third.compareTo(maximumNumber)>0)
-            maximumNumber = third;
+    @SafeVarargs
+    public static < E extends Comparable<E>> E compareMaximum(E ...values) {
+        E maximumNumber = values[0];
+        for (int i = 1; i < values.length; i++) {
+            if (maximumNumber.compareTo(values[i]) < 0) {
+                maximumNumber = values[i];
+            }
+        }
         return maximumNumber;
     }
 }
