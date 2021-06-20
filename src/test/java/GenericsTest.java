@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class GenericsTest {
 
-    // TC 1.1 Given Max Number at First Position
+    // TC for Maximum Of Integer With 3 parameters
     @Test
     public void givenFirstNumber_whenFirstNumberMaximum_shouldReturnMaximum() {
         FindMaximum<Integer> findMaximum = new FindMaximum<>(8,4, 2);
@@ -12,7 +12,7 @@ public class GenericsTest {
         Assert.assertEquals((Integer) 8, max);
     }
 
-    // TC 1.2 Given Max Number At Second position
+
     @Test
     public void givenSecondNumber_whenSecondNumberMaximum_shouldReturnMaximum() {
         FindMaximum<Integer> findMaximum = new FindMaximum<>(4,8, 2);
@@ -20,7 +20,7 @@ public class GenericsTest {
         Assert.assertEquals((Integer) 8, max);
     }
 
-    // TC 1.3 Given Max Number At Third position
+
     @Test
     public void givenThirdNumber_whenThirdNumberMaximum_shouldReturnMaximum() {
         FindMaximum<Integer> findMaximum = new FindMaximum<>(4,8, 2);
@@ -28,16 +28,14 @@ public class GenericsTest {
         Assert.assertEquals((Integer) 8, max);
     }
 
-    //Finding Maximum Float Value
-
-    //Given 1st num Max Then Return Max
+    //TC For Finding Maximum of Float Value with 3 parameters
     @Test
     public void givenFloatNumber_whenFirstNumberMaximum_shouldReturnMaximum() {
         FindMaximum<Float> findMaximum = new FindMaximum<>(25f,10f, 15f);
         Float max = findMaximum.compareMaximum();
         Assert.assertEquals((Float) 25f, max);
     }
-    //Given 2nd num Max Then Return Max
+
 
     @Test
     public void givenFloatNumber_whenSecondNumberMaximum_shouldReturnMaximum() {
@@ -45,7 +43,7 @@ public class GenericsTest {
         Float max =  findMaximum.compareMaximum();
         Assert.assertEquals((Float) 25f, max);
     }
-    // Given 3rd num Max Then Return Max
+
 
     @Test
     public void givenFloatNumber_whenThirdNumberMaximum_shouldReturnMaximum() {
@@ -54,7 +52,7 @@ public class GenericsTest {
         Assert.assertEquals((Float) 25f, max);
     }
 
-    //Finding Maximum String Value
+    //TC For Finding Maximum of String Value with 3 parameters
 
     @Test
     public void givenString_whenFirstWord_shouldReturnMaximum() {
@@ -77,7 +75,7 @@ public class GenericsTest {
         Assert.assertEquals("Peach", max);
     }
 
-    //To Accept More Than 3 Parameters
+    //Test case for Maximum with 4 parameters
 
     @Test
     public void givenMultipleInt_shouldReturn_maxInt() {
@@ -86,7 +84,7 @@ public class GenericsTest {
 
     @Test
     public void  givenMultipleFloat_shouldReturn_maxFloat() {
-        Assert.assertEquals((Float) 40.4485f, new FindMaximum<>(10.5423f, 20.48452f, 30.345f, 40.4485f).testMax());
+        Assert.assertEquals((Float) 25f, new FindMaximum<>(25f, 10f, 15f, 5f).testMax());
     }
 
     @Test

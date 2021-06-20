@@ -9,7 +9,12 @@ public class FindMaximum<E extends Comparable> {
         this.values = values;
     }
     public E testMax(){
+        E maximumNumber = (E) compareMaximum(values);
+        printMaximum(maximumNumber);
         return (E) compareMaximum(values);
+    }
+    public void printMaximum(E maximumNumber){
+        System.out.println("Maximum is :" + maximumNumber + "\n");
     }
 
     @SafeVarargs
