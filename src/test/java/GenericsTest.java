@@ -7,21 +7,24 @@ public class GenericsTest {
     // TC 1.1 Given Max Number at First Position
     @Test
     public void givenFirstNumber_whenFirstNumberMaximum_shouldReturnMaximum() {
-        Integer max = FindMaximum.compareMaximum(8, 4, 6);
+        FindMaximum<Integer> findMaximum = new FindMaximum<>(8,4, 2);
+        Integer max = findMaximum.compareMaximum();
         Assert.assertEquals((Integer) 8, max);
     }
 
     // TC 1.2 Given Max Number At Second position
     @Test
     public void givenSecondNumber_whenSecondNumberMaximum_shouldReturnMaximum() {
-        Integer max = FindMaximum.compareMaximum(6, 8, 4);
+        FindMaximum<Integer> findMaximum = new FindMaximum<>(4,8, 2);
+        Integer max =findMaximum.compareMaximum();
         Assert.assertEquals((Integer) 8, max);
     }
 
     // TC 1.3 Given Max Number At Third position
     @Test
     public void givenThirdNumber_whenThirdNumberMaximum_shouldReturnMaximum() {
-        Integer max = FindMaximum.compareMaximum(6, 4, 8);
+        FindMaximum<Integer> findMaximum = new FindMaximum<>(4,8, 2);
+        Integer max = findMaximum.compareMaximum();
         Assert.assertEquals((Integer) 8, max);
     }
 
@@ -30,21 +33,24 @@ public class GenericsTest {
     //Given 1st num Max Then Return Max
     @Test
     public void givenFloatNumber_whenFirstNumberMaximum_shouldReturnMaximum() {
-        Float max = FindMaximum.compareMaximum(25f, 15f, 10f);
+        FindMaximum<Float> findMaximum = new FindMaximum<>(25f,10f, 15f);
+        Float max = findMaximum.compareMaximum();
         Assert.assertEquals((Float) 25f, max);
     }
     //Given 2nd num Max Then Return Max
 
     @Test
     public void givenFloatNumber_whenSecondNumberMaximum_shouldReturnMaximum() {
-        Float max = FindMaximum.compareMaximum(15f, 25f, 10f);
+        FindMaximum<Float> findMaximum = new FindMaximum<>(10f,25f, 15f);
+        Float max =  findMaximum.compareMaximum();
         Assert.assertEquals((Float) 25f, max);
     }
     // Given 3rd num Max Then Return Max
 
     @Test
     public void givenFloatNumber_whenThirdNumberMaximum_shouldReturnMaximum() {
-        Float max = FindMaximum.compareMaximum(10f, 15f, 25f);
+        FindMaximum<Float> findMaximum = new FindMaximum<>(15f,10f, 25f);
+        Float max = findMaximum.compareMaximum();
         Assert.assertEquals((Float) 25f, max);
     }
 
@@ -52,19 +58,22 @@ public class GenericsTest {
 
     @Test
     public void givenString_whenFirstWord_shouldReturnMaximum() {
-        String max = FindMaximum.compareMaximum("Peach", "Banana", "Apple");
+        FindMaximum<String> findMaximum = new FindMaximum<>("Peach","Banana","Apple");
+        String max = findMaximum.compareMaximum();
         Assert.assertEquals("Peach", max);
     }
 
     @Test
     public void givenString_whenSecondWord_shouldReturnMaximum() {
-        String max = FindMaximum.compareMaximum("Banana", "Peach", "Apple");
+        FindMaximum<String> findMaximum = new FindMaximum<>("Banana","Peach","Apple");
+        String max = findMaximum.compareMaximum();
         Assert.assertEquals("Peach", max);
     }
 
     @Test
     public void givenString_whenThirdWord_shouldReturnMaximum() {
-        String max = FindMaximum.compareMaximum("Apple", "Banana", "Peach");
+        FindMaximum<String> findMaximum = new FindMaximum<>("Apple","Banana","Peach");
+        String max = findMaximum.compareMaximum();
         Assert.assertEquals("Peach", max);
     }
 }
