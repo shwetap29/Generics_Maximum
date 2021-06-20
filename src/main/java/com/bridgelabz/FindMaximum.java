@@ -10,4 +10,12 @@ public class FindMaximum {
      return maximumNumber;
     }
 
+    public static Float compareFloatMaximum(Float firstNumber, Float secondNumber, Float thirdNumber) {
+        Float maximumNumber = firstNumber;
+        if (secondNumber.compareTo(maximumNumber)>0)
+            maximumNumber = secondNumber;
+        if (thirdNumber.compareTo(maximumNumber)>0)
+            maximumNumber = thirdNumber;
+        return maximumNumber;
+    }
 }

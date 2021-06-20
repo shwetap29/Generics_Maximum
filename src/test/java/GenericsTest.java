@@ -4,7 +4,8 @@ import org.junit.Test;
 
 public class GenericsTest {
     FindMaximum findMaximum = new FindMaximum();
-// TC 1.1 Given Max Number at First Position
+
+    // TC 1.1 Given Max Number at First Position
     @Test
     public void givenFirstNumber_whenFirstNumberMaximum_shouldReturnMaximum(){
         Integer max = FindMaximum.compareIntegerMaximum(8,4,6);
@@ -21,5 +22,28 @@ public class GenericsTest {
     public void givenThirdNumber_whenThirdNumberMaximum_shouldReturnMaximum(){
         Integer max = FindMaximum.compareIntegerMaximum(6,4,8);
         Assert.assertEquals((Integer)8,max);
+    }
+
+    //Finding Maximum Float Value
+
+    //Given 1st num Max Then Return Max
+    @Test
+    public void givenFloatNumber_whenFirstNumberMaximum_shouldReturnMaximum(){
+        Float max = FindMaximum.compareFloatMaximum(25f, 15f, 10f);
+        Assert.assertEquals((Float)25f,max);
+    }
+    //Given 2nd num Max Then Return Max
+
+    @Test
+    public void givenFloatNumber_whenSecondNumberMaximum_shouldReturnMaximum(){
+        Float max = FindMaximum.compareFloatMaximum(15f, 25f, 10f);
+        Assert.assertEquals((Float)25f,max);
+    }
+    // Given 3rd num Max Then Return Max
+
+    @Test
+    public void givenFloatNumber_whenThirdNumberMaximum_shouldReturnMaximum(){
+        Float max = FindMaximum.compareFloatMaximum(10f, 15f, 25f);
+        Assert.assertEquals((Float)25f,max);
     }
 }
